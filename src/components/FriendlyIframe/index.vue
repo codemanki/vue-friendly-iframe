@@ -24,6 +24,11 @@ export default {
       required: false,
       default: 'anonymous'
     },
+    loading: {
+      type: String,
+      required: false,
+      default: ''
+    },
     target: {
       type: String,
       required: false,
@@ -107,6 +112,7 @@ export default {
       if (this.name) this.iframeEl.setAttribute('name', this.name);
       if (this.title) this.iframeEl.setAttribute('title', this.title);
       if (this.sandbox) this.iframeEl.setAttribute('sandbox', this.sandbox);
+      if (this.loading) this.iframeEl.setAttribute('loading', this.loading);
 
       this.$el.appendChild(this.iframeEl);
 
